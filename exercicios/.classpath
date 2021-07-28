@@ -6,5 +6,9 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="agenda"/>
+	<classpathentry kind="src" path="mediaNotas"/>
+	<classpathentry kind="src" path="DadosDoProduto"/>
+	<classpathentry kind="src" path="impostoPFePJ"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -9,7 +9,7 @@ import java.util.Scanner;
 import entities.Client;
 import entities.Order;
 import entities.OrderItem;
-import entities.Product;
+import entities.Product1;
 import entities.enums.OrderStatus;
 
 public class Program {
@@ -30,7 +30,7 @@ public class Program {
 		System.out.print("E-mail: ");
 		String email = sc.nextLine();
 		
-		System.out.print("Birth date: ");
+		System.out.print("Birth date: (DD/MM/YYYY)");
 		String birthDate = sc.nextLine();
 		
 		System.out.println("Enter order data:");
@@ -45,6 +45,7 @@ public class Program {
 		for (int i = 1; i <= items; i++) {
 			System.out.println("Enter #"+ i + " item data:");
 			System.out.print("Product name: ");
+			sc.nextLine();
 			String pName = sc.next();
 			
 			System.out.print("Product price: ");
@@ -53,7 +54,7 @@ public class Program {
 			System.out.print("Quantity: ");
 			Integer quantity = sc.nextInt();
 			
-			order.addItem(new OrderItem(quantity, new Product(pName, pPrice)));
+			order.addItem(new OrderItem(quantity, new Product1(pName, pPrice)));
 			
 		}
 		

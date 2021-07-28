@@ -8,19 +8,19 @@ import java.util.List;
 import entities.enums.OrderStatus;
 
 public class Order {
-	
+
 	public SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-	
-	
+
 	private Date moment;
 	private OrderStatus status;
-	private List<OrderItem> item = new ArrayList<>();
+	
+	private List<OrderItem> items = new ArrayList<>();
 	private Client client;
-	
+
 	public Order() {
-		
+
 	}
-	
+
 	public Order(Date moment, OrderStatus status, Client client) {
 		this.moment = moment;
 		this.status = status;
@@ -42,6 +42,7 @@ public class Order {
 	public void setStatus(OrderStatus status) {
 		this.status = status;
 	}
+
 	public Client getClient() {
 		return client;
 	}
@@ -49,43 +50,37 @@ public class Order {
 	public void setClient(Client client) {
 		this.client = client;
 	}
-	
-	public List<OrderItem> getOrderItem() {
-		return item;
-	}
-	
+
 	public void addItem(OrderItem item) {
-		this.item.add(item);
+		this.items.add(item);
 	}
+
 	public void removeItem(OrderItem item) {
-		this.item.remove(item);
+		this.items.remove(item);
 	}
-	
+
 	public Double total() {
-	 	double soma = 0;
-		for (OrderItem orderItem : item) {
+		double soma = 0;
+		for (OrderItem orderItem : items) {
 			soma += orderItem.subTotal();
-		}		
+		}
 		return soma;
 	}
-	
+
+	@Override
 	public String toString() {
-		
+
 		StringBuilder sb = new StringBuilder();
 		sb.append("ORDER SUMMARY: \n");
-		sb.append("Order Moment:"+ sdf.format(moment) +"\n");
-		sb.append("Order Status: " + status +"\n");
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		sb.append("Client: " + client.getName() + " ("  + sdf.format(client.getBirthDate()) + ") - "+ client.getEmail()+"\n");
+		sb.append("Order Moment:" + sdf.format(moment) + "\n");
+		sb.append("Order Status: " + status + "\n");
+		sb.append("Client: " + client +"\n");
 		sb.append("ORder items: \n");
-		
-		for (OrderItem orderItem : item) {
-			sb.append(orderItem.getProduct().getName() + ", "
-					+ orderItem.getProduct().getPrice() + 
-					", Quantity: " + orderItem.getQuantity()+ 
-					", Subtotal" + orderItem.subTotal()+ "\n");
+
+		for (OrderItem orderItem : items) {
+			sb.append(orderItem + "\n");
 		}
-		
+
 		sb.append("Total Price: " + total());
 		return sb.toString();
 	}

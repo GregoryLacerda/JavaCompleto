@@ -10,5 +10,9 @@
 	<classpathentry kind="src" path="Enumerados"/>
 	<classpathentry kind="src" path="composition1"/>
 	<classpathentry kind="src" path="composition2"/>
+	<classpathentry kind="src" path="heranca"/>
+	<classpathentry kind="src" path="polimorfismo"/>
+	<classpathentry kind="src" path="abstractClass"/>
+	<classpathentry kind="src" path="abstractMethods"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
