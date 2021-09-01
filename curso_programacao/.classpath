@@ -14,5 +14,6 @@
 	<classpathentry kind="src" path="polimorfismo"/>
 	<classpathentry kind="src" path="abstractClass"/>
 	<classpathentry kind="src" path="abstractMethods"/>
+	<classpathentry kind="src" path="interface1"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

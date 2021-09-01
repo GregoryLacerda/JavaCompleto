@@ -10,5 +10,9 @@
 	<classpathentry kind="src" path="mediaNotas"/>
 	<classpathentry kind="src" path="DadosDoProduto"/>
 	<classpathentry kind="src" path="impostoPFePJ"/>
+	<classpathentry kind="src" path="exceptions"/>
+	<classpathentry kind="src" path="arquivos"/>
+	<classpathentry kind="src" path="interface"/>
+	<classpathentry kind="src" path="set"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
